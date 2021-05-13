@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container * {
+            padding: 10px;
+            margin: 40px;
+            border-radius: 10px;
+            flex: 1;
+            flex-basis: 100%;
+            text-align: center;
+        }
+        .head {
+            background-color: blueviolet;
+            height: 120px;
+        }
+        .main p {
+            text-align: center;
+        }
+        .main {
+            background-color: violet;
+            height: 200px;
+            font-size: 20px;
+            overflow: scroll;
+        }
+        .aside {
+            background-color: tomato;
+        }
+        .aside1 {
+            background-color: yellow;
+        }
+        .footer {
+            background-color: turquoise;
+            height: 120px;
+        }
+        @media all and (min-width:800px) {
+            .main {
+                order: 2;
+                flex: 3;
+            }
+            .aside {
+                order: 1;
+            }
+            .aside1 {
+                order: 3;
+            }
+            .footer {
+                order: 4;
+            }
+        }
+        @media all and (min-width:600px) {
+            .aside {
+                flex: 1;
+            }
+            .aside1 {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="head">
+        <h1>TPS 4 STEPs</h1>
+    </div>
+    <div class="main">
+        <i><b>Step1 : </b>Work site Control.</i><br>
+        <i><b>Step2 : </b>Continuous Flow.</i><br>
+        <i><b>Step3 : </b>Standardized Work.</i><br>
+        <i><b>Step4 : </b>Pull System.</i><br>
+    </div>
+    <div class="aside">
+        <h3>Work Site Control Objective</h3>
+    </div>
+    <div class="aside1">
+        <h3>TPS Necessary Condition</h3>
+    </div>
+    <div class="footer">
+        <h2>Toyota Production System TPS[SMEs]</h2>
+    </div>
+  
+</div> 
+    <h2 style="color: tomato;">ฐิตาพร เรืองสิทธิ์ 63070504803 APE</h2>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int</title>
+    <script>
+        function basicCalculation() {
+            var num1 = parseFloat( document.getElementById("num1").value);
+            var num2 = parseFloat( document.getElementById("num2").value);
+            var re,operator;
+            operator = document.getElementById("operator").value;
+            if (operator === "+"){
+                re = num1 + num2;
+            }
+            if (operator ==="-"){
+                re = num1 - num2;
+            }
+            if (operator ==="*"){
+                re = num1 * num2;
+            }
+            if (operator ==="/"){
+                re = num1 / num2;
+            }
+            document.getElementById("re").value = re.toFixed(3);
+        }
+
+        function c2f() {
+            let c = parseFloat(document.getElementById("tmc").value);
+            let f = c * 9 / 5 + 32;
+            document.getElementById("tmf").value = f.toFixed(2);
+        }
+        function f2c() {
+            let f = parseFloat(document.getElementById("tmf").value);
+            let c = (f - 32) *5 / 9;
+            document.getElementById("tmc").value = c.toFixed(2);
+        }
+    </script>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .ca {
+            width: 250px;
+            height: 200px;
+            border: 5px solid rgb(212, 0, 0);
+            border-radius: 20px;
+            background-color: rgb(255, 115, 115);
+            padding: 15px;
+            margin: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .tm {
+            width: 250px;
+            height: 200px;
+            border: 5px solid rgb(0, 92, 212);
+            border-radius: 20px;
+            background-color: rgb(100, 162, 255);
+            padding: 15px;
+            margin: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .ca h2{
+            text-align: center;
+            color: rebeccapurple;
+        }
+        .ca label{
+            color: purple;
+        }
+        .ca input{
+            background-color: powderblue;
+        }
+        .tm label {
+            color: springgreen;
+        }
+        .tm input {
+            background-color: yellow;
+        }
+        .tm h3 {
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <div class="container">
+
+    <div class="ca">
+    <h2>Basic Calculator</h2>
+    <label for="num1">Number1</label><br>
+    <input type="text" name="" id="num1">
+    <select name="" id="operator">
+        <option value="+">+</option> 
+        <option value="-">-</option> 
+        <option value="*">x</option> 
+        <option value="/">/</option> 
+    </select><br>
+    <label for="num2">Number2</label><br>
+    <input type="text" name="" id="num2"><br>
+    <label for="re">Result</label><br>
+    <input type="text" name="" id="re">
+    <button onclick="basicCalculation()">Enter</button>
+    </div>
+
+    <div class="tm">
+        <h3>Temperature Conversion</h3><br>
+        <label for="tmc">Celcius(&#8451;)</label><br>
+        <input type="text" name="" id="tmc">
+        <button onclick="c2f()">C2F</button><br>
+        <label for="tmf">Fahrenheit(&#8457;)</label><br>
+        <input type="text" name="" id="tmf">
+        <button onclick="f2c()">F2C</button><br>
+    </div>
+
+    </div>
+</body>
+</html>

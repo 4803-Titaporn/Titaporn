@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+    <script>
+        function vc() {
+            var d = parseFloat(document.getElementById("d").value);
+            var n = parseFloat(document.getElementById("n").value);
+            var v = (d*(22/7)*n)/1000;
+            document.getElementById("v").value = v.toFixed(3);
+        }
+        function fn() {
+            var l = parseFloat(document.getElementById("l").value);
+            var t = parseFloat(document.getElementById("t").value);
+            var N = parseFloat(document.getElementById("N").value);
+            var f = l / (t*N)
+            document.getElementById("f").value = f.toFixed(3);
+        }
+    </script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .vc {
+            width: 350px;
+            height: 300px;
+            border: 5px solid #DDA0DD;
+            background-color: #FFC0CB;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 30px;
+            box-shadow: 10px 5px #483D8B;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .vc h2 {
+            text-align: center;
+            color: #663399;
+        }
+        .vc input {
+            background-color: #FFF5EE;
+        }
+        .vc label {
+            color: #663399;
+        }
+        .vc sp {
+            color: #663399;
+        }
+        .fn {
+            width: 350px;
+            height: 300px;
+            border: 5px solid #DDA0DD;
+            background-color: #FFC0CB;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 30px;
+            box-shadow: 10px 5px #483D8B;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .fn input {
+            background-color: #FFF5EE;
+        }
+        .fn h2 {
+            text-align: center;
+            color: #663399;
+        }
+        .fn label {
+            color: #663399;
+        }
+        .fn sp {
+            color: #663399;
+        }
+        .h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #663399;
+            text-align: center;
+            text-shadow: 3px 3px #FFF8DC;
+            background-color: #FFDAB9;
+        }
+        .img {
+            width: 462px;
+            height: 378px;
+            margin: 25px 20px 20px 35%;
+            border: 10px double #DDA0DD;
+            background-color: #FFC0CB;
+            box-shadow: 10px 5px #483D8B;
+        }
+    </style>
+</head>
+<body style="background-color: #E0FFFF">
+    <div class="h1">
+    <h1>Cutting speed & Feed rate</h1>
+    </div>
+    <div class="container">
+        <div class="vc">
+            <h2>Cutting speed(Vc)</h2>
+            <label for="d">Machined diameter(Dm)</label><br>
+            <input type="text" name="" id="d" size="30px"><sp>(mm)</sp><br>
+            <label for="n">Spindle speed(n)</label><br>
+            <input type="text" name="" id="n" size="30px"><sp>(rpm)</sp><br>
+            <button onclick="vc()">Enter</button><br>
+            <hr style="border: 2px solid #DDA0DD;">
+            <label for="v">Cutting speed(Vc)</label><br>
+            <input type="text" name="" id="v" size="30px"><sp>(m/min)</sp>
+        </div>
+        <div class="fn">
+            <h2>Feed rate(fn)</h2>
+            <label for="l">Machined length(lm)</label><br>
+            <input type="text" name="" id="l" size="30px"><sp>(mm)</sp><br>
+            <label for="t">Period of engagement(Tc)</label><br>
+            <input type="text" name="" id="t" size="30px"><sp>(min)</sp><br>
+            <label for="N">Spindle speed(n)</label><br>
+            <input type="text" name="" id="N" size="30px"><sp>(rpm)</sp><br>
+            <button onclick="fn()">Enter</button><br>
+            <hr style="border: 2px solid #DDA0DD;">
+            <label for="f">Feed rate(fn)</label><br>
+            <input type="text" name="" id="f" size="30px"><sp>(mm/rev)</sp>
+        </div>
+
+    </div>
+        <div class="img">
+            <img src="https://www.meetyoucarbide.com/wp-content/uploads/2021/01/%E5%9B%BE%E7%89%871-1.png">
+        </div>
+    <div class="h1">
+        <h3>Titaporn Reungsit 63070504803 APE</h3>
+    </div>
+</body>
+</html>
